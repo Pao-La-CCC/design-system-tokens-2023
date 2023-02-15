@@ -2,9 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.css';
 
+// import React from 'react'
+
+// const Button = ({className,children,name,onClick,type,value}) => {
+//   return (
+//     <button
+//         className={className}
+//         name={name}
+//         onClick={onClick}
+//         type={type}
+//         value={value}
+//     >
+//         {children}
+
+//     </button>
+//   )
+// }
+
+// export default Button ;
+
 /**
  * Primary UI component for user interaction
  */
+
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
