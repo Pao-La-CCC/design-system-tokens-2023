@@ -1,0 +1,43 @@
+@import url('https://fonts.cdnfonts.com/css/exo-4');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+$exo :'Exo', sans-serif;
+$poppins : 'Poppins', sans-serif;
+
+@mixin title {
+    font-family: $exo;
+}
+
+body {
+    font-family: $poppins;
+}
+
+@mixin title1($font-size : 40px, $font-weight : bold){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin title2($font-size : 36px, $font-weight : 600){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin title3($font-size : 32px, $font-weight : 400){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin paragraph($font-size : 2Opx, $font-weight : 400){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin label($font-size : 14px, $font-weight : 600){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin textButton($font-size : 14px, $font-weight : bold){
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
