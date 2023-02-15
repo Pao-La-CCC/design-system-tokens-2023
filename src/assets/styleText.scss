@@ -4,40 +4,63 @@
 $exo :'Exo', sans-serif;
 $poppins : 'Poppins', sans-serif;
 
-@mixin title {
-    font-family: $exo;
+.title {
+    @mixin title {
+        font-family: $exo;
+    }
 }
 
 body {
     font-family: $poppins;
 }
 
-@mixin title1($font-size : 40px, $font-weight : bold){
-    font-size: $font-size;
-    font-weight: $font-weight;
+.title1 {
+    @mixin title1($font-size : 40px, $font-weight : bold){
+        font-size: $font-size;
+        font-weight: $font-weight;
+    }
 }
 
-@mixin title2($font-size : 36px, $font-weight : 600){
-    font-size: $font-size;
-    font-weight: $font-weight;
+.title2 {
+    @mixin title2($font-size : 36px, $font-weight : 600){
+        font-size: $font-size;
+        font-weight: $font-weight;
+    }
 }
 
-@mixin title3($font-size : 32px, $font-weight : 400){
-    font-size: $font-size;
-    font-weight: $font-weight;
+.title3 {
+    @mixin title3($font-size : 32px, $font-weight : 400){
+        font-size: $font-size;
+        font-weight: $font-weight;
+    }
 }
 
-@mixin paragraph($font-size : 2Opx, $font-weight : 400){
-    font-size: $font-size;
-    font-weight: $font-weight;
+.paragraph {
+    @mixin paragraph($font-size : 2Opx, $font-weight : 400){
+        font-size: $font-size;
+        font-weight: $font-weight;
+    }
 }
 
-@mixin label($font-size : 14px, $font-weight : 600){
-    font-size: $font-size;
-    font-weight: $font-weight;
+.label {
+    @mixin label($font-size : 16px, $font-weight : 600){
+        font-size: $font-size;
+        font-weight: $font-weight;
+    }
 }
 
-@mixin textButton($font-size : 14px, $font-weight : bold){
-    font-size: $font-size;
-    font-weight: $font-weight;
+.textButton {
+    @mixin textButton($font-size : 16px, $font-weight : bold){
+        font-size: $font-size;
+        font-weight: $font-weight;
+    }
+}
+
+
+.link {
+    @mixin link($color : $secondary-darker, $font-size : 16px){
+        text-decoration: none;
+        color: $color;
+        font-size: $font-size;
+    }
 }
