@@ -1,7 +1,8 @@
+// THIS IS AN EXAMPLE
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button } from './molecules/Button/Button';
+import { Button } from '../components/molecules/Button/Button';
 import './header.css';
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
