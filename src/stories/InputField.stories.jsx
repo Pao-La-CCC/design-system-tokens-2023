@@ -8,7 +8,6 @@ export default {
   component: InputFieldComponent ,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   arg: {
-    primary: true,
     label: 'Button',
     type: 'text',
     id: 'aze'

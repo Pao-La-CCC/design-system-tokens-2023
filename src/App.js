@@ -4,6 +4,7 @@ import { Button } from './components/molecules/Button/Button';
 import Input from './components/atoms/Input/Input';
 import TextField from './components/atoms/TextField/TextField';
 import PhraseLink from './components/molecules/PhraseLink/PhraseLink';
+import { Card } from './components/organisms/Card/Card';
 
 
 let tag  = ['paragraphText' , 'headingText', 'standardText' ];
@@ -23,6 +24,10 @@ function App() {
         linkText="Sign up" 
         to="/signup"
       />
+      <br />
+      <h2>Organisms</h2>
+      <h3>Card</h3>
+      <Card />
     </div>
   );
 }
