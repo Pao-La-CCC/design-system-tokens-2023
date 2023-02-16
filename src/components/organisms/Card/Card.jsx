@@ -30,10 +30,13 @@ export const Card = () => {
                 <div>
                     <Link>Forgot your password? </Link>
                 </div>
-                <PhraseLink text="Don't have an account?" linkText="Sign Up" />
             </div>
 
             <Button label="Log In" />
+            <div className='row'>
+
+                <PhraseLink text="Don't have an account?" linkText="Sign Up" />
+            </div>
         </div>
 
  
