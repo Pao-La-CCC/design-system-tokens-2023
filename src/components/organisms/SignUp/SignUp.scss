@@ -1,0 +1,17 @@
+@import "../../../assets/styleColors.scss";
+
+#root {
+    // margin: 0 auto;
+    
+    .card {
+        background-color: $white;
+        border: 1px solid $black;
+        width: 50%;
+        height: 55vh;
+        margin: 0 auto;
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

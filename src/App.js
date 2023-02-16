@@ -4,7 +4,10 @@ import { Button } from './components/molecules/Button/Button';
 import Input from './components/atoms/Input/Input';
 import TextField from './components/atoms/TextField/TextField';
 import PhraseLink from './components/molecules/PhraseLink/PhraseLink';
-import { Card } from './components/organisms/Card/Card';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
+
 
 
 let tag  = ['paragraphText' , 'headingText', 'standardText' ];
@@ -14,20 +17,19 @@ let sizeElement = ['simple' , 'medium' , 'large' , 'extraLarge'];
 function App() {
 
   return (
-    <div className="App">
-      <Button primary size="small" label="Test" />
-      <Input className="form-control" type="text" placeholder="rechercher" />
-      <Button primary size="small" label=" Continuer" />
-      <Button primary size="small" label="Envoyer" />
-      <PhraseLink 
-        text="Don't have an account?" 
-        linkText="Sign up" 
-        to="/signup"
-      />
-      <br />
-      <h2>Organisms</h2>
-      <h3>Card</h3>
-      <Card />
+    <div>
+
+    <Router>
+      <Routes>
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+      </Routes>
+    </Router>
+     <div className="App">
+
+        <SignInPage/>
+         
+    </div>
     </div>
   );
 }
