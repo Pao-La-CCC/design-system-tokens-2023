@@ -2,42 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
 import { TextField } from '../../atoms/TextField/TextField';
+import { LoadingSpinner } from '../../atoms/Spinner/LoadingSpinner';
 
-// import React from 'react'
+export const Button = ({ primary, backgroundColor, size, label, onClick, isLoading, ...props }) => {
+  const mode = primary ? 'btn-bg--primary' : 'storybook-button--secondary';
+  // const isLoading = false;
 
-// const Button = ({className,children,name,onClick,type,value}) => {
-//   return (
-//     <button
-//         className={className}
-//         name={name}
-//         onClick={onClick}
-//         type={type}
-//         value={value}
-//     >
-//         {children}
-
-//     </button>
-//   )
-// }
-
-// export default Button ;
-
-/**
- * Primary UI component for user interaction
- */
-
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
       )}
-      style={backgroundColor && { backgroundColor }}
+      // style={backgroundColor && { backgroundColor }}
       {...props}
     >
-        <TextField  tag='standardText' sizeElement="simple" text={label} /> 
+        <TextField  tag='standardText' sizeElement="simple" text={ !isLoading && label} /> 
+        {isLoading && <LoadingSpinner className="spinner-size" />}
     </button> 
   );
 };
@@ -53,7 +34,7 @@ Button.propTypes = {
   /**
    * What background color to use
    */
-  backgroundColor: PropTypes.string,
+  // backgroundColor: PropTypes.string,
   /**
    * How large should the button be?
    */
@@ -66,11 +47,13 @@ Button.propTypes = {
    * Optional click handler
    */
   onClick: PropTypes.func,
+  isLoading: PropTypes.bool
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
+  // backgroundColor: undefined,
   primary: false,
   size: "medium",
   onClick: undefined,
+  isLoading: false
 };
