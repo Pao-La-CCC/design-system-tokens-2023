@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
+import { TextField } from '../../atoms/TextField/TextField';
 
 // import React from 'react'
 
@@ -34,8 +35,8 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
-      {label}
-    </button>
+        <TextField  tag='standardText' sizeElement="simple" text={label} /> 
+    </button> 
   );
 };
 
