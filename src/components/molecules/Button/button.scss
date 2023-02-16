@@ -1,3 +1,6 @@
+@import "../../../assets/styleColors.scss";
+@import "../../../assets/styleText.scss";
+
 #root {
   .storybook-button {
     font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,12 +22,13 @@
 
   .btn-bg--primary {
     color: rgb(255, 255, 255);
-    background-color: #7372ab;
+    // color:
+    background-color: $primary !important;
   }
 
   .btn-bg--secondary {
     color: rgb(255, 255, 255);
-    // background-color: #b97290;
+    background-color: $secondary !important;
   }
 
   //SIZES
@@ -40,4 +44,5 @@
     font-size: 16px;
     padding: 12px 24px;
   }
+
 }

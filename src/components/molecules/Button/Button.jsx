@@ -2,19 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './button.scss';
 import { TextField } from '../../atoms/TextField/TextField';
+import { LoadingSpinner } from '../../atoms/Spinner/LoadingSpinner';
 
-export const Button = ({ primary, backgroundColor, size, label, onClick, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ primary, backgroundColor, size, label, onClick, isLoading, ...props }) => {
+  const mode = primary ? 'btn-bg--primary' : 'storybook-button--secondary';
+  // const isLoading = false;
+
   return (
     <button
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
       )}
-      style={backgroundColor && { backgroundColor }}
+      // style={backgroundColor && { backgroundColor }}
       {...props}
     >
-        <TextField  tag='standardText' sizeElement="simple" text={label} /> 
+        <TextField  tag='standardText' sizeElement="simple" text={ !isLoading && label} /> 
+        {isLoading && <LoadingSpinner className="spinner-size" />}
     </button> 
   );
 };
@@ -30,7 +34,7 @@ Button.propTypes = {
   /**
    * What background color to use
    */
-  backgroundColor: PropTypes.string,
+  // backgroundColor: PropTypes.string,
   /**
    * How large should the button be?
    */
@@ -43,11 +47,13 @@ Button.propTypes = {
    * Optional click handler
    */
   onClick: PropTypes.func,
+  isLoading: PropTypes.bool
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
+  // backgroundColor: undefined,
   primary: false,
   size: "medium",
   onClick: undefined,
+  isLoading: false
 };
