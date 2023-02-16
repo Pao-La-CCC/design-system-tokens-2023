@@ -31,7 +31,9 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={["storybook-button", `storybook-button--${size}`, mode].join(
+        " "
+      )}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
@@ -39,6 +41,9 @@ export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
     </button> 
   );
 };
+
+
+
 
 Button.propTypes = {
   /**
@@ -52,7 +57,7 @@ Button.propTypes = {
   /**
    * How large should the button be?
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   /**
    * Button contents
    */
@@ -66,6 +71,6 @@ Button.propTypes = {
 Button.defaultProps = {
   backgroundColor: null,
   primary: false,
-  size: 'medium',
+  size: "medium",
   onClick: undefined,
 };
