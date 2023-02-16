@@ -12,6 +12,8 @@ function App() {
 
   return (
     <div className="App">
+      <Button primary size="small" label="Test" />
+      <Input className="form-control" type="text" placeholder="rechercher" />
       <Button primary size="small" label=" Continuer" />
       <Button primary size="small" label="Envoyer" />
     </div>
